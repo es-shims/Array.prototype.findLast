@@ -35,5 +35,11 @@
 				"strict": 1,
 			},
 		},
+		{
+			"files": "**/*.mjs",
+			"rules": {
+				"no-restricted-exports": 1,
+			},
+		},
 	],
 }
