@@ -6,6 +6,7 @@
 	"rules": {
 		"array-bracket-newline": 0,
 		"func-name-matching": 0,
+		"id-length": 0,
 		"max-statements-per-line": [2, { "max": 2 }],
 		"new-cap": [2, {
 			"capIsNewExceptions": [
@@ -14,6 +15,7 @@
 				"Get",
 				"IsCallable",
 				"LengthOfArrayLike",
+				"RequireObjectCoercible",
 				"ToBoolean",
 				"ToObject",
 				"ToString"
