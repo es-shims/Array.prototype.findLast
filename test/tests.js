@@ -28,6 +28,16 @@ var getTestArr = function () {
 };
 
 module.exports = function (findLast, t) {
+	forEach(v.nonArrays, function (nonArray) {
+		if (nonArray != null) { // eslint-disable-line eqeqeq
+			t.equal(
+				findLast(nonArray, function () { return true; }),
+				nonArray.length > 0 ? nonArray[nonArray.length - 1] : undefined,
+				inspect(nonArray) + ' is not an array'
+			);
+		}
+	});
+
 	t.test('throws on a non-callable predicate', function (st) {
 		forEach(v.nonFunctions, function (nonFunction) {
 			st['throws'](
@@ -109,6 +119,11 @@ module.exports = function (findLast, t) {
 		st.equal(findLast([], trueThunk), undefined, 'true thunk callback yields undefined');
 		st.equal(findLast([], falseThunk), undefined, 'false thunk callback yields undefined');
 
+		var counter = 0;
+		var callback = function () { counter += 1; };
+		findLast([], callback);
+		st.equal(counter, 0, 'counter is not incremented');
+
 		st.end();
 	});
 
@@ -178,6 +193,37 @@ module.exports = function (findLast, t) {
 			st.equal(Object.prototype.toString.call(list), '[object String]', 'boxed list arg is a String');
 			return true;
 		});
+
+		st.end();
+	});
+
+	t.test('array altered during loop', function (st) {
+		var arr = ['Shoes', 'Car', 'Bike'];
+		var results = [];
+
+		findLast(arr, function (kValue) {
+			if (results.length === 0) {
+				arr.splice(1, 1);
+			}
+			results.push(kValue);
+		});
+
+		st.equal(results.length, 3, 'predicate called three times');
+		st.deepEqual(results, ['Bike', 'Bike', 'Shoes']);
+
+		results = [];
+		arr = ['Skateboard', 'Barefoot'];
+		findLast(arr, function (kValue) {
+			if (results.length === 0) {
+				arr.push('Motorcycle');
+				arr[0] = 'Magic Carpet';
+			}
+
+			results.push(kValue);
+		});
+
+		st.equal(results.length, 2, 'predicate called twice');
+		st.deepEqual(results, ['Barefoot', 'Magic Carpet']);
 
 		st.end();
 	});
