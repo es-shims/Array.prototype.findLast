@@ -5,7 +5,6 @@
 
 	"rules": {
 		"array-bracket-newline": 0,
-		"func-name-matching": 0,
 		"id-length": 0,
 		"max-statements-per-line": [2, { "max": 2 }],
 		"new-cap": [2, {
@@ -28,17 +27,11 @@
 		{
 			"files": "test/**",
 			"rules": {
+				"func-name-matching": 0,
 				"id-length": 0,
 				"max-lines-per-function": 0,
-				"max-params": 0,
 				"no-invalid-this": 1,
 				"strict": 1,
-			},
-		},
-		{
-			"files": "**/*.mjs",
-			"rules": {
-				"no-restricted-exports": 1,
 			},
 		},
 	],
