@@ -5,6 +5,20 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [v1.2.0](https://github.com/es-shims/Array.prototype.findLast/compare/v1.1.1...v1.2.0) - 2022-04-11
+
+### Commits
+
+- [actions] reuse common workflows [`47e3be7`](https://github.com/es-shims/Array.prototype.findLast/commit/47e3be7cda282144ddc18204534ec5983055a48e)
+- [Dev Deps] update `eslint`, `@ljharb/eslint-config`, `object-inspect`, `safe-publish-latest`, `tape` [`da9ec92`](https://github.com/es-shims/Array.prototype.findLast/commit/da9ec926ee4393d8cf2e2b74202a059a92ef59ac)
+- [Dev Deps] update `eslint`, `@ljharb/eslint-config`, `aud`, `auto-changelog`, `object-inspect`, `tape` [`2658604`](https://github.com/es-shims/Array.prototype.findLast/commit/26586043f36390c4967972c2caf318c0bbf583fb)
+- [actions] update codecov uploader [`9e4ac5e`](https://github.com/es-shims/Array.prototype.findLast/commit/9e4ac5e104a2f258cb818a19d3e6eb4023d1edd3)
+- [New] `shim`/`auto`: add `findLast` to `Symbol.unscopables` [`a3703b0`](https://github.com/es-shims/Array.prototype.findLast/commit/a3703b0dbeefb1dcd4c4fcec9f89c67bc7513821)
+- [meta] use `prepublishOnly` script for npm 7+ [`499fd61`](https://github.com/es-shims/Array.prototype.findLast/commit/499fd61f61d094d997b53c34628e477089b6ff96)
+- [Deps] update `es-abstract` [`9833a38`](https://github.com/es-shims/Array.prototype.findLast/commit/9833a38b6f6d949636fca1e945b2eee1812e142b)
+- [Deps] update `es-abstract` [`3055ac5`](https://github.com/es-shims/Array.prototype.findLast/commit/3055ac5ad56eb224f72c4cc18a06d0af06c6d2a1)
+- [Dev Deps] update `@es-shims/api` [`4639a6b`](https://github.com/es-shims/Array.prototype.findLast/commit/4639a6b10b3ecb84e1bc3e645cad1c60de8d99da)
+
 ## [v1.1.1](https://github.com/es-shims/Array.prototype.findLast/compare/v1.1.0...v1.1.1) - 2021-10-01
 
 ### Commits
