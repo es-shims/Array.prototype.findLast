@@ -17,8 +17,8 @@
 				"RequireObjectCoercible",
 				"ToBoolean",
 				"ToObject",
-				"ToString"
-			]
+				"ToString",
+			],
 		}],
 		"no-magic-numbers": 0,
 	},
@@ -28,7 +28,6 @@
 			"files": "test/**",
 			"rules": {
 				"func-name-matching": 0,
-				"id-length": 0,
 				"max-lines-per-function": 0,
 				"no-invalid-this": 1,
 				"strict": 1,
