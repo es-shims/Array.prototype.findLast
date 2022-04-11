@@ -2,6 +2,7 @@
 
 var define = require('define-properties');
 var getPolyfill = require('./polyfill');
+var shimUnscopables = require('es-shim-unscopables');
 
 module.exports = function shimFindLast() {
 	var polyfill = getPolyfill();
@@ -10,8 +11,8 @@ module.exports = function shimFindLast() {
 		{ findLast: polyfill },
 		{ findLast: function () { return Array.prototype.findLast !== polyfill; } }
 	);
-	if (typeof Symbol === 'function' && typeof Symbol.unscopables === 'symbol') {
-		Array.prototype[Symbol.unscopables].findLast = true;
-	}
+
+	shimUnscopables('findLast');
+
 	return polyfill;
 };
