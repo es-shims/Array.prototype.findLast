@@ -10,5 +10,8 @@ module.exports = function shimFindLast() {
 		{ findLast: polyfill },
 		{ findLast: function () { return Array.prototype.findLast !== polyfill; } }
 	);
+	if (typeof Symbol === 'function' && typeof Symbol.unscopables === 'symbol') {
+		Array.prototype[Symbol.unscopables].findLast = true;
+	}
 	return polyfill;
 };

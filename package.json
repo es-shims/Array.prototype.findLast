@@ -81,6 +81,7 @@
 		"eslint": "^8.4.1",
 		"evalmd": "^0.0.19",
 		"for-each": "^0.3.3",
+		"has": "^1.0.3",
 		"has-strict-mode": "^1.0.1",
 		"in-publish": "^2.0.1",
 		"nyc": "^10.3.2",
