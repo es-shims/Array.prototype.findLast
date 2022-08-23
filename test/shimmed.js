@@ -1,5 +1,7 @@
 'use strict';
 
+var orig = Array.prototype.findLast;
+
 require('../auto');
 
 var test = require('tape');
@@ -12,6 +14,8 @@ var functionsHaveNames = function f() {}.name === 'f';
 var runTests = require('./tests');
 
 test('shimmed', function (t) {
+	t.comment('shimmed: ' + (orig === Array.prototype.findLast ? 'no' : 'yes'));
+
 	t.equal(Array.prototype.findLast.length, 1, 'Array#findLast has a length of 1');
 	t.test('Function name', { skip: !functionsHaveNames }, function (st) {
 		st.equal(Array.prototype.findLast.name, 'findLast', 'Array#findLast has name "findLast"');
