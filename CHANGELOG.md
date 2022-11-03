@@ -5,6 +5,18 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [v1.2.2](https://github.com/es-shims/Array.prototype.findLast/compare/v1.2.1...v1.2.2) - 2022-11-02
+
+### Commits
+
+- [meta] use `npmignore` to autogenerate an npmignore file [`c8bd8e9`](https://github.com/es-shims/Array.prototype.findLast/commit/c8bd8e9410e3b0468754bcc722d10eade90d6b8d)
+- [Deps] update `es-abstract`, `get-intrinsic` [`7dd1e37`](https://github.com/es-shims/Array.prototype.findLast/commit/7dd1e3706aa4d1dc8007dc430ad721b787cceece)
+- [actions] update rebase action to use reusable workflow [`116bfa3`](https://github.com/es-shims/Array.prototype.findLast/commit/116bfa3374f7adbe4363ee186ae397d6175a1386)
+- [Deps] update `define-properties`, `es-abstract`, `get-intrinsic` [`8a6fcb5`](https://github.com/es-shims/Array.prototype.findLast/commit/8a6fcb543f3854f4124b26a60d651f26cb836658)
+- [Dev Deps] update `es-value-fixtures`, `object-inspect`, `tape` [`899e29a`](https://github.com/es-shims/Array.prototype.findLast/commit/899e29acdeb046b92e6a19739cc97f0605bd074d)
+- [Dev Deps] update `aud`, `tape` [`2019883`](https://github.com/es-shims/Array.prototype.findLast/commit/2019883d4a054b95856b6d421e106b9a0fe0f20b)
+- [Tests] add indication of whether it was shimmed [`c940767`](https://github.com/es-shims/Array.prototype.findLast/commit/c9407677645d551481e8b98f96297fec7518165a)
+
 ## [v1.2.1](https://github.com/es-shims/Array.prototype.findLast/compare/v1.2.0...v1.2.1) - 2022-04-11
 
 ### Commits
