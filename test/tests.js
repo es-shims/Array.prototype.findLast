@@ -2,6 +2,7 @@ var hasStrictMode = require('has-strict-mode')();
 var v = require('es-value-fixtures');
 var forEach = require('for-each');
 var inspect = require('object-inspect');
+var maxSafeInteger = require('es-abstract/helpers/maxSafeInteger');
 
 var global = Function('return this')(); // eslint-disable-line no-new-func
 var trueThunk = function () { return true; };
@@ -225,6 +226,21 @@ module.exports = function (findLast, t) {
 		st.equal(results.length, 2, 'predicate called twice');
 		st.deepEqual(results, ['Barefoot', 'Magic Carpet']);
 
+		st.end();
+	});
+
+	t.test('maximum index', function (st) {
+		// https://github.com/tc39/test262/pull/3775
+
+		var arrayLike = { length: Number.MAX_VALUE };
+		var calledWithIndex = [];
+
+		findLast(arrayLike, function (_, index) {
+			calledWithIndex.push(index);
+			return true;
+		});
+
+		st.deepEqual(calledWithIndex, [maxSafeInteger - 1], 'predicate invoked once');
 		st.end();
 	});
 };
