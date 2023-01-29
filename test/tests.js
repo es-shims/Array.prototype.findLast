@@ -3,8 +3,8 @@ var v = require('es-value-fixtures');
 var forEach = require('for-each');
 var inspect = require('object-inspect');
 var maxSafeInteger = require('es-abstract/helpers/maxSafeInteger');
+var global = require('globalthis')();
 
-var global = Function('return this')(); // eslint-disable-line no-new-func
 var trueThunk = function () { return true; };
 var falseThunk = function () { return false; };
 
