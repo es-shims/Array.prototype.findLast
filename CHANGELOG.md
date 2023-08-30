@@ -5,6 +5,15 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [v1.2.3](https://github.com/es-shims/Array.prototype.findLast/compare/v1.2.2...v1.2.3) - 2023-08-29
+
+### Commits
+
+- [Deps] update `define-properties`, `es-abstract`, `get-intrinsic` [`ed6e699`](https://github.com/es-shims/Array.prototype.findLast/commit/ed6e69963e3b7252ce6fc82a92f0843bf92e2cb8)
+- [Tests] add passing test262 test [`ba57e7f`](https://github.com/es-shims/Array.prototype.findLast/commit/ba57e7fb3d85c5d022f84538ac610cbbad3a1f06)
+- [Dev Deps] update `@es-shims/api`, `@ljharb/eslint-config`, `aud`, `object-inspect`, `tape` [`fdf9269`](https://github.com/es-shims/Array.prototype.findLast/commit/fdf9269de92629dbbb101e91971efbab45634020)
+- [Tests] use `globalthis` [`d56fd28`](https://github.com/es-shims/Array.prototype.findLast/commit/d56fd280792c2fa78d6b4efd9c419df5bf49e6d8)
+
 ## [v1.2.2](https://github.com/es-shims/Array.prototype.findLast/compare/v1.2.1...v1.2.2) - 2022-11-02
 
 ### Commits
