@@ -5,6 +5,16 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [v1.2.4](https://github.com/es-shims/Array.prototype.findLast/compare/v1.2.3...v1.2.4) - 2024-02-05
+
+### Commits
+
+- [Deps] update `call-bind`, `define-properties`, `es-abstract`, `es-shim-unscopables`, `get-intrinsic` [`6960289`](https://github.com/es-shims/Array.prototype.findLast/commit/6960289aad2898b3c1c3b874937fe171ccd195cb)
+- [Refactor] use `es-errors`, so things that only need those do not need `get-intrinsic` [`96e976a`](https://github.com/es-shims/Array.prototype.findLast/commit/96e976af6cbe6240472bf6ac509526e66bb48fbc)
+- [Dev Deps] update `aud`, `npmignore`, `tape` [`e41c671`](https://github.com/es-shims/Array.prototype.findLast/commit/e41c6718bb4e1f498bc0c7d850fe6f595e6314d1)
+- [Dev Deps] use `hasown` instead of `has` [`3e81897`](https://github.com/es-shims/Array.prototype.findLast/commit/3e818971d0432e11e639d4e0f13fba7ca7f1392d)
+- [Dev Deps] update `object-inspect`, `tape` [`09387d9`](https://github.com/es-shims/Array.prototype.findLast/commit/09387d910af91741959ee9106f20b8379b80fdcb)
+
 ## [v1.2.3](https://github.com/es-shims/Array.prototype.findLast/compare/v1.2.2...v1.2.3) - 2023-08-29
 
 ### Commits
