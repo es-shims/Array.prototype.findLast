@@ -7,7 +7,7 @@ var Get = require('es-abstract/2023/Get');
 var IsCallable = require('es-abstract/2023/IsCallable');
 var LengthOfArrayLike = require('es-abstract/2023/LengthOfArrayLike');
 var ToBoolean = require('es-abstract/2023/ToBoolean');
-var ToObject = require('es-abstract/2023/ToObject');
+var ToObject = require('es-object-atoms/ToObject');
 var ToString = require('es-abstract/2023/ToString');
 
 module.exports = function findLast(predicate) {
