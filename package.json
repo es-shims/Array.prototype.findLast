@@ -24,14 +24,7 @@
 	"homepage": "https://github.com/es-shims/Array.prototype.findLast#readme",
 	"main": "index.js",
 	"exports": {
-		".": [
-			{
-				"import": "./index.mjs",
-				"require": "./index.js",
-				"default": "./index.js"
-			},
-			"./index.js"
-		],
+		".": "./index.js",
 		"./auto": "./auto.js",
 		"./polyfill": "./polyfill.js",
 		"./implementation": "./implementation.js",
@@ -45,8 +38,7 @@
 		"pretest": "npm run --silent lint && evalmd README.md",
 		"posttest": "aud --production",
 		"tests-only": "nyc tape 'test/**/*.js'",
-		"tests-esm": "nyc node test/index.mjs",
-		"test": "npm run tests-only && npm run tests-esm",
+		"test": "npm run tests-only",
 		"lint": "eslint --ext=js,mjs .",
 		"postlint": "es-shim-api --bound",
 		"version": "auto-changelog && git add CHANGELOG.md",
